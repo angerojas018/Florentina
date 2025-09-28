@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <link rel="shortcut icon" href="imgs/img-logo-superior/Logo-Superior.png">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Menú de Helados</title>
+    <link rel="stylesheet" href="css/menu.css">
+    <link rel="stylesheet" href="css/menu-normalize.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet">    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <script src="buscador.js" defer></script>
+    </head>
+
+<body>
+
+    <header class="header-superior">
+        <div class="barra-superior">
+            <div class="linea-color"></div>
+        </div>
+
+        <nav class="barra-navegacion">
+            <div class="contenedor-logo-marca">
+                <a href="inicio.html" class="logo-marca-href">
+                    <img src="imgs/img-header/Logo-FlorentinaSVG.svg" alt="Logo Florentina" class="logo-florentina">
+                </a>
+            </div>
+
+            <!-- Botón hamburguesa para móviles -->
+            <button class="hamburguesa" aria-label="Abrir menú">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+
+            <div class="menu-navegacion">
+                <a href="inicio.html" class="elemento-menu">Inicio</a>
+                <a href="menu.html" class="elemento-menu">Menú</a>
+                <a href="quienes-somos.html" class="elemento-menu">Quienes Somos</a>
+                <a href="contactanos.html" class="elemento-menu">Contáctanos</a>
+            </div>
+            <div class="buscador-navegacion">
+    <input type="text" id="buscador" placeholder=" Busca algo...">
+    <ul id="resultados" class="sugerencias"></ul>
+</div>
+            <div class="carrito-icono">
+                <button id="btn-carrito">
+                    🛒 <span id="contador-carrito">0</span>
+                </button>
+            </div>
+        </nav>
+
+    </header>
+
+    <!-- Carrito flotante -->
+    <div id="carrito" class="carrito" aria-hidden="true">
+        <h3>🛒 Tu Carrito</h3>
+        <ul id="lista-carrito"></ul>
+        <p>Total: <span id="total-carrito">$0</span></p>
+        <button id="vaciar-carrito">Vaciar carrito</button>
+        <button id="btn-pagar">Pagar</button>
+    </div>
+
+
+
+
+
+    <main>
+        <h2 class="titulo-galeria">Nuestros Productos</h2>
+        <h2 class="barra-galeria"></h2>
+
+        <div class="menu-container">
+            <!-- Producto 1 -->
+            <div class="card">
+                <img src="imgs/img-productos/ensalada.jpg" alt="Ensalada">
+                <h2>Ensalada De Frutas</h2>
+                <p class="price">$21.000</p>
+                <p>Ensalada de frutas con papaya, piña, banano, fresa, manzana, crema de leche, leche condensada,
+                    chantillí, mucho queso y tu sabor de helado favorito.</p>
+                <center><button class="btn-wsp">🛒 Agregar al carrito</button></center>
+            </div>
+
+            <!-- Producto 2 -->
+            <div class="card">
+                <img src="imgs/img-productos/premium.jpg" alt="Ensalada">
+                <h2>Ensalada Premium</h2>
+                <p class="price">$28.000</p>
+                <p>3 sabores de helado, brownie, fresa, piña, manzana, banano, papaya, cereza, crema de leche,
+                    queso,
+                    chantillí, 2 galletas, salsa de choco y chispitas.</p>
+                <center><button class="btn-wsp">🛒 Agregar al carrito</button></center>
+            </div>
+
+            <!-- Producto 3 -->
+            <div class="card">
+                <img src="imgs/img-productos/alegria.jpg" alt="Alegria">
+                <h2>Helado Alegria</h2>
+                <p class="price">$14.000</p>
+                <p>2 sabores de helado, 2 barquillos, fresa, masmelo, chantillí, chispitas y salsa de choco.</p>
+                <br><br>
+                <center><button class="btn-wsp">🛒 Agregar al carrito</button></center>
+            </div>
+
+            <!-- Producto 4 -->
+            <div class="card">
+                <img src="imgs/img-productos/explo.jpg" alt="Explo">
+                <h2>Helado Explosión</h2>
+                <p class="price">$20.000</p>
+                <p>3 sabores de helado, cono de galleta, queso, manzana, durazno, fresa, lechera, galleta de
+                    chocolate,
+                    chantillí, barquillo, MyM y salsa de choco.</p>
+                <center><button class="btn-wsp">🛒 Agregar al carrito</button></center>
+            </div>
+
+            <!-- Producto 5 -->
+            <div class="card">
+                <img src="imgs/img-productos/copa flo.jpg" alt="Copa">
+                <h2>Copa Florentina</h2>
+                <p class="price">$20.000</p>
+                <p>3 sabores de helado, fresa, durazno, queso, chantillí, cereza, salsa de choco y galleta.</p><br>
+                <center><button class="btn-wsp">🛒 Agregar al carrito</button></center>
+            </div>
+
+            <!-- Producto 6 -->
+            <div class="card">
+                <img src="imgs/img-productos/waffle.jpg" alt="Waffle">
+                <h2>Waffle Florentina</h2>
+                <p class="price">$20.000</p>
+                <p>Waffle con base de nutella, salsa de choco.Escoge 2 frutas y 2 topping dulces.</p><br><br>
+                <center><button class="btn-wsp">🛒 Agregar al carrito</button></center>
+            </div>
+
+            <!-- Producto 7 -->
+            <div class="card">
+                <img src="imgs/img-productos/miniw.jpg" alt="Mini">
+                <h2>Mini Waffle</h2>
+                <p class="price">$20.000</p>
+                <p>2 mini waffles bañados en nutella, uno con tu topping favorito de dulce y otro con tu fruta
+                    preferida.</p><br>
+                <center><button class="btn-wsp">🛒 Agregar al carrito</button></center>
+            </div>
+
+            <!-- Producto 8 -->
+            <div class="card">
+                <img src="imgs/img-productos/triple.jpg" alt="Tripleta">
+                <h2>Waffle Tripleta</h2>
+                <p class="price">$20.000</p>
+                <p>3 waffles en torre bañados en chocolate y nutella con 2 topping de dulce, 2 topping de fruta y tu
+                    sabor de helado preferido.</p>
+                <center><button class="btn-wsp">🛒 Agregar al carrito</button></center>
+            </div>
+
+            <!-- Producto 9 -->
+            <div class="card">
+                <img src="imgs/img-productos/choco.jpg" alt="Chocolatoso">
+                <h2>Chocolatoso</h2>
+                <p class="price">$20.000</p>
+                <p>Malteada de chocolate con trozos de brownie, chantillí, masmelo, chocolate, bolitas de dulce de
+                    chocolate y barquillo.</p>
+                <center><button class="btn-wsp">🛒 Agregar al carrito</button></center>
+            </div>
+
+            <!-- Producto 10 -->
+            <div class="card">
+                <img src="imgs/img-productos/frutos mlt.jpg" alt="Frutos rojos">
+                <h2>Frutos Rojos Florentina</h2>
+                <p class="price">$20.000</p>
+                <p>Malteada de frutos rojos con helado de fresa, brocheta de fresa con nutella y chips, gomitas de
+                    fresa
+                    y cereza.</p>
+                <center><button class="btn-wsp">🛒 Agregar al carrito</button></center>
+            </div>
+
+            <!-- Producto 11 -->
+            <div class="card">
+                <img src="imgs/img-productos/malt ensueño.jpg" alt="Malteada Ensueño">
+                <h2>Malteada Ensueño</h2>
+                <p class="price">$20.000</p>
+                <p>Malteada de tu sabor favorito, chantillí, cereza, galleta, chispitas y mini chips.</p><br>
+                <center><button class="btn-wsp">🛒 Agregar al carrito</button></center>
+            </div>
+
+            <!-- Producto 12 -->
+            <div class="card">
+                <img src="imgs/img-productos/oreo.jpg" alt="Oreo">
+                <h2>Oreo Florentina</h2>
+                <p class="price">$20.000</p>
+                <p>Malteada de brownie, con helado de vainilla, polvoriado de oreo, chocoball, chantillí, galletas
+                    oreo
+                    y brownie.</p>
+                <center><button class="btn-wsp">🛒 Agregar al carrito</button></center>
+            </div>
+
+            <!-- Producto 13 -->
+            <div class="card">
+                <img src="imgs/img-productos/burguer house.jpg" alt="Burguer">
+                <h2>Burguer House</h2>
+                <p class="price">$20.000</p>
+                <p>Burguer con pan artesanal sellado y mantequilla, jugosa carne, mermelada de cebolla, tocineta
+                    crocante, salsa especial, triple mozzarella, vegetales y papas a la francesa.</p>
+                <center><button class="btn-wsp">🛒 Agregar al carrito</button></center>
+            </div>
+
+            <!-- Producto 14 -->
+            <div class="card">
+                <img src="imgs/img-productos/chicken.jpg" alt="Chicken">
+                <h2>Eparedado Chicken</h2>
+                <p class="price">$20.000</p>
+                <p>Delicioso pollo con tocineta ahumada en salsa bechamel, lechuga, tomate, queso mozzarella y salsa
+                    de
+                    la casa.</p><br><br>
+                <center><button class="btn-wsp">🛒 Agregar al carrito</button></center>
+            </div>
+
+            <!-- Producto 15 -->
+            <div class="card">
+                <img src="imgs/img-productos/emparedado colombiano.jpg" alt="Colombianito">
+                <h2>Emparedado Colombianito</h2>
+                <p class="price">$20.000</p>
+                <p>Carne desmechada, tocineta, chorizo, maduritos, queso, maíz tierno y papas a la francesa.</p>
+                <br><br>
+                <center><button class="btn-wsp">🛒 Agregar al carrito</button></center>
+            </div>
+
+            <!-- Producto 16 -->
+            <div class="card">
+                <img src="imgs/img-productos/papas ensueño.jpg" alt="Papas ensueño">
+                <h2>Papitas Ensueño</h2>
+                <p class="price">$20.000</p>
+                <p>Papas a la francesa, salchicha americana, huevos de codorniz y queso.</p><br><br><br>
+                <center><button class="btn-wsp">🛒 Agregar al carrito</button></center>
+            </div>
+
+            <!-- Producto 17 -->
+            <div class="card">
+                <img src="imgs/img-productos/patacones.jpg" alt="Patacones">
+                <h2>Pataconsito</h2>
+                <p class="price">$20.000</p>
+                <p>3 patacones acompañados de pollo en salsa blanca, carne en salsa criolla y chorizo con queso
+                    mozzarella acompañado con salsa de la casa.</p>
+                <center><button class="btn-wsp">🛒 Agregar al carrito</button></center>
+            </div>
+
+            <!-- Producto 18 -->
+            <div class="card">
+                <img src="imgs/img-productos/picada.jpg" alt="Picada">
+                <h2>Picada para Dos</h2>
+                <p class="price">$20.000</p>
+                <p>Carne ropa vieja, pollo en salsa blanca, chorizo, tocineta, madurito, papas a la francesa, queso
+                    fundido, maíz tierno y huevo de xodorniz.</p>
+                <center><button class="btn-wsp">🛒 Agregar al carrito</button></center>
+            </div>
+        </div>
+    </main>
+
+    <!-- Botón WhatsApp -->
+    <a href="https://api.whatsapp.com/send/?phone=573228599240&text&type=phone_number&app_absent=0" id="btn-whatsapp"
+        class="whatsapp" title="Escríbenos por WhatsApp">
+        <img src="https://cdn-icons-png.flaticon.com/512/124/124034.png" alt="WhatsApp">
+    </a>
+
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="footer-column">
+                <img src="imgs/img-footer/Florentina-FondoTransparente.png" alt="Logo Florentina" class="footer-logo">
+                <p>
+                    <strong>Florentina Ice Cream</strong> 🍦<br>
+                    Helados artesanales, crepes y malteadas servidos en un ambiente cálido y moderno.<br>
+                </p>
+            </div>
+            <div class="footer-column">
+                <h3>Categorias</h3>
+                <ul>
+                    <li><a href="inicio.html">Inicio</a></li>
+                    <li><a href="menu.html">Menú</a></li>
+                    <li><a href="quienes-somos.html">Quienes Somos</a></li>
+                    <li><a href="contactanos.html">Conctáctanos</a></li>
+                </ul>
+            </div>
+            <div class="footer-column">
+                <h3>Quienes Somos</h3>
+                <ul>
+                    <li><a href="quienes-somos.html #que-es-florentina">Que es Florentina</a></li>
+                    <li><a href="quienes-somos.html #quienes-somos">Quiénes Somos</a></li>
+                    <li><a href="quienes-somos.html #mision">Misión</a></li>
+                    <li><a href="quienes-somos.html #vision">Visión</a></li>
+                    <li><a href="quienes-somos.html #equipo-humano">Equipo Humano</a></li>
+                </ul>
+            </div>
+            <div class="footer-column">
+                <h3>Sedes</h3>
+                <ul class="footer-sedes">
+                    <li><i class="fas fa-location-dot"></i><a
+                            href="https://www.google.com/maps/search/Florentina+Heladeria/@2.947055,-75.3000819,7034m/data=!3m1!1e3?entry=ttu&g_ep=EgoyMDI1MDQyMy4wIKXMDSoASAFQAw%3D%3D">
+                            Centro: Cra 7 #15-29</a></li>
+                    <li><i class="fas fa-location-dot"></i><a
+                            href="https://www.google.com/maps/search/Florentina+Heladeria/@2.947055,-75.3000819,7034m/data=!3m1!1e3?entry=ttu&g_ep=EgoyMDI1MDQyMy4wIKXMDSoASAFQAw%3D%3D">
+                            Norte: Calle 64 #1E - 03</a></li>
+                </ul>
+            </div>
+            <div class="footer-column">
+                <h3>Síguenos</h3>
+                <ul class="footer-socials">
+                    <li><a href="https://api.whatsapp.com/send/?phone=573228599240&text&type=phone_number&app_absent=0"><i
+                                class="fab fa-whatsapp"></i>Whatsapp</a></li>
+                    <li><a href="https://www.facebook.com/florentinaneiva/?locale=es_LA" target="_blank"><i
+                                class="fab fa-facebook-f"></i> Facebook</a></li>
+                    <li><a href="https://www.instagram.com/florentina.colombia/?hl=es" target="_blank"><i
+                                class="fab fa-instagram"></i>Instagram</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-barra">
+            &copy; 2025 <span style="color: #f06b9a;"><strong>Florentina Ice Cream.</strong></span> Todos los
+            derechos
+            reservados.
+        </div>
+    </footer>
+    <script src="js/buscador.js"></script>
+    <script src="js/responsive-header.js"></script>
+    <script src="js/carrito.js"></script>
+</body>
+
+</html>
